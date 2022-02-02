@@ -18,3 +18,7 @@ body    {
 .font-for-brand {
     text-transform: uppercase;
 }
+
+#img-products {
+    font-size: large;
+}

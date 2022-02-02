@@ -1,47 +1,65 @@
 from django.db import models
 
-# Create your models here.
 
-class Category (models.Model):
-    name = models.Charfield(max_length=254)
-    friendly_name = models.Charfield(max_length=254, null=True, blank=True)
+class Category(models.Model):
 
-    def _str_(self)
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    def __str__(self):
         return self.name
     
-    def get_friendly_name(self)
+    def get_friendly_name(self):
         return self.friendly_name
 
-class Product_Type (models.Model):
-    name = models.Charfield(max_length=254)
-    friendly_name = models.Charfield(max_length=254, null=True, blank=True)
-        
-    def _str_(self)
+class Plans(models.Model):
+
+    class Meta: 
+        verbose_name_plural = 'Plans'
+
+    id = models.OneToOneField('Product', on_delete=models.CASCADE, primary_key=True,)
+
+    number_of_weeks = models.ForeignKey('Weeks', null=True, on_delete=models.SET_NULL)
+    kind_of_plan = models.ForeignKey('TypeOfPlan', null=True, on_delete=models.SET_NULL)
+
+    day1 = models.CharField(max_length=254, null=True, blank=True)
+    day2 = models.CharField(max_length=254, null=True, blank=True)
+    day3 = models.CharField(max_length=254, null=True, blank=True)
+    day4 = models.CharField(max_length=254, null=True, blank=True)
+    day5 = models.CharField(max_length=254, null=True, blank=True)
+    day6 = models.CharField(max_length=254, null=True, blank=True)
+    day7 = models.CharField(max_length=254, null=True, blank=True)
+
+class TypeOfPlan(models.Model):
+    name = models.CharField(max_length=30)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    def __str__(self):
         return self.name
-
-    def get_friendly_name(self)
+    
+    def get_friendly_name(self):
         return self.friendly_name
 
-class Nutrition()
-    nutrition_id =
-    vegan = 
+class Weeks(models.Model):
 
+    class Meta:
+        verbose_name_plural = 'Weeks'
 
-class Workout_Plans()
-    dificulty
-    type_objective
-    duration
+    name = models.CharField(max_length=1)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
+    
+    def get_friendly_name(self):
+        return self.friendly_name
 
-class Nutrition_Plans()
-    dificulty
-    type_objective
-    vegan
-    duration
-
-class Product(model.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    product_type = models.ForeignKey('Product_Type')
-    sku = models.CharField(max_length=254, null=True, blank=True)
+class Product(models.Model):
+    category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
+    sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -51,3 +69,4 @@ class Product(model.Model):
 
     def __str__(self):
         return self.name
+
