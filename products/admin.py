@@ -18,12 +18,12 @@ class ProductAdmin(admin.ModelAdmin):
 
 class PlansAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
+        'name',
         'number_of_weeks',
         'kind_of_plan',
     )
 
-    ordering = ('id',)
+    ordering = ('name',)
 
 
 class CategoryAdmin(admin.ModelAdmin):

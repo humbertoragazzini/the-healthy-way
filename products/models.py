@@ -20,7 +20,7 @@ class Plans(models.Model):
     class Meta: 
         verbose_name_plural = 'Plans'
 
-    id = models.OneToOneField('Product', on_delete=models.CASCADE, primary_key=True,)
+    name = models.OneToOneField('Product', on_delete=models.CASCADE, unique=True)
 
     number_of_weeks = models.ForeignKey('Weeks', null=True, on_delete=models.SET_NULL)
     kind_of_plan = models.ForeignKey('TypeOfPlan', null=True, on_delete=models.SET_NULL)
