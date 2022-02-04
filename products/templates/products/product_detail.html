@@ -2,20 +2,25 @@
 
 {% load static %}
 
+
+
 {% block content %}
+
+{% include 'includes/products-bar.html' %}
+
     <div class="container my-5">
         <div class="row justify-content-start">
-            <div class="col-6">
+            <div class="col-xs-12 col-md-6">
         
                 <div class="card mb-3">
                     <img src="{{product.image_url}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{ product.name }}</h5>
-                      <p class="card-text">{{ product.description }}</p>
-                      <p class="card-text">{{ product.price }}</p>
+                      <h4 class="card-title">{{ product.name }}</h4>
+                      <p class="card-text"><strong>Description:</strong><br>{{ product.description }}</p>
+                      <p class="card-text"><strong>£</strong>{{ product.price }}</p>
                     {% if plan != False %}
-                      <p>Number of weeks: {{ plan.number_of_weeks }}</p>
-                      <p class="card-text"><small class="text-muted">Type of Plan: {{ plan.kind_of_plan }}</small></p>
+                      <p><strong>Number of weeks</strong>: {{ plan.number_of_weeks }}</p>
+                      <p class="card-text"><small class="text-muted">Type of Plan:( {{ type_of_plan.get_friendly_name }} )</small></p>
                     {% endif %}
                       
                     </div>
