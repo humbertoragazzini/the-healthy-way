@@ -9,16 +9,10 @@
           <li class="nav-item mx-2">
             <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
           </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Workout Plans</a>
-          </li>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Nutrition Plans</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="{% url 'products' %}">Shop</a>
-          </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="{% url 'products' %}">Shop</a>
+            </li>
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                 <li class="nav-item mx-2">
@@ -32,12 +26,19 @@
               <a class="nav-link btn btn-danger text-light" href="{% url 'account_logout' %}">Logout</a>
             </li>
           {% else %}
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">Workout Plans</a>
+          </li>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">Nutrition Plans</a>
+          </li>
             <li class="nav-item mx-2">
               <a class="nav-link btn btn-success text-light" href="{% url 'account_login' %}">Login</a>
             </li>
           {% endif %}
         </ul>
-        <form method="GET" action="" class="d-flex">
+        <form method="GET" action="{% url 'products' %}" class="d-flex">
           <input class="form-control me-2" type="text" name="q" placeholder="Search a product" aria-label="Search">
           <button class="btn btn-outline-success" type="submit"><span class="icon"><i class="fas fa-search"></i></span></button>
         </form>
