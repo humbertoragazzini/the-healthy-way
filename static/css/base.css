@@ -5,6 +5,7 @@ html    {
 body    {
     height: calc(100vh - 164px);
     font-family: 'Lato';
+    background-color: #ffffff !important;
 }
 
 .icon   {
@@ -18,4 +19,13 @@ body    {
 .font-for-brand {
     text-transform: uppercase;
 }
+
+.custom-product-active{
+    background-image: linear-gradient(180deg, rgba(0, 4, 36, 0.336) 0%, rgba(225,225,254,0.7903536414565826) 47%, rgba(0,254,255,0) 100%) !important;
+}
+
+.background-nav{
+    background-color: rgb(229, 146, 78);
+}
+
 

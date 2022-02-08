@@ -1,0 +1,43 @@
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12">
+            <div class="row">
+                <div class="col my-2">
+                    <div class="d-flex justify-content-center dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sorting By Price
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=price&direction=desc">High to Low -<i class="mx-2 fas fa-sort-numeric-down-alt"></i></a></li>
+                          <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=price&direction=asc">Low to High -<i class="mx-2 fas fa-sort-numeric-down"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col my-2">
+                    <div class="d-flex justify-content-center dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sorting By Rating
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=rating&direction=desc">Best Rating First</a></li>
+                        <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=rating&direction=asc">Low Rating First</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col my-2">
+                    <div class="d-flex justify-content-center dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sorting By Name
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=name&direction=asc">Alphabetical (A-to-Z)</a></li>
+                        <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=name&direction=desc">Alphabetical (Z-to-A)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

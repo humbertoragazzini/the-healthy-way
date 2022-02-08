@@ -6,7 +6,7 @@
 
 {% block content %}
 {% include 'includes/products-bar.html' %}
-
+{% include 'includes/sorting-bar.html' %}
     <div class="container my-5">
         <div class="row justify-content-start">
             {% for product in products %}
@@ -18,8 +18,17 @@
                       <p class="card-text text-truncate">{{ product.description }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><strong class="mx-2">£</strong>{{ product.price }}</li>
-                      <li class="list-group-item"><i class="fas fa-star mx-2"></i>{{ product.rating }}/5</li>
+                      <li class="list-group-item"><strong>£</strong><span class="mx-2">{{ product.price }}</span></li>
+                      <li class="list-group-item"><i class="fas fa-star"></i><span class="mx-2">{{ product.rating }}/5</span></li>
+                      {% if nbar_category == 'nutrition_and_workout_plans,gym_tools,nutrition_suplements' or nbar_category == 'products'  %}
+                      <li class="list-group-item text-truncate"><strong>Category:</strong><span class="mx-2">({{ product.category.get_friendly_name }})</span></li>
+                      {% endif %}
+                      {% for planes in plans %}
+                        {% if planes.name.name == product.name and nbar_category == 'nutrition_and_workout_plans' %}
+                          <li class="list-group-item"><p class="card-text"><strong>Duration</strong>: {{ planes.number_of_weeks }} Weeks</p></li>
+                          <li class="list-group-item"><p class="card-text"><strong>Type of Plan:</strong>( {{ planes.kind_of_plan.get_friendly_name }} )</p></li>
+                        {% endif %}
+                      {% endfor %}
                     </ul>
                     <div class="card-body">
                       <a href="#" class="card-link btn btn-success">Add</a>
@@ -28,8 +37,13 @@
                     </div>
                   </div>
             </div> 
-            {% endfor %}           
+            {% endfor %} 
+        
         </div>
     </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+ 
 {% endblock %}

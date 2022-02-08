@@ -1,18 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid my-3">
     <div class="row justify-content-center">
         <div class="col-md-8 col-sm-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link {% if nbar_category == 'nutrition_and_workout_plans,gym_tools,nutrition_suplements' %} active {% endif %}" aria-current="page" href="{% url 'products' %}?category=nutrition_and_workout_plans,gym_tools,nutrition_suplements">All Products</a>
+                  <a class="category nav-link link-dark {% if nbar_category == 'nutrition_and_workout_plans,gym_tools,nutrition_suplements' %} active custom-product-active{% elif nbar_category == 'products' %} active custom-product-active{% endif %}" aria-current="page" href="{% url 'products' %}?category=nutrition_and_workout_plans,gym_tools,nutrition_suplements" id="personal-border">All Products</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {% if nbar_category == 'nutrition_and_workout_plans' %} active {% endif %}" href="{% url 'products' %}?category=nutrition_and_workout_plans">Nutrition and Workout Plans</a>
+                  <a class="category nav-link link-dark {% if nbar_category == 'nutrition_and_workout_plans' %} active custom-product-active{% endif %}" href="{% url 'products' %}?category=nutrition_and_workout_plans">Nutrition and Workout Plans</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if nbar_category == 'gym_tools' %} active {% endif %}" href="{% url 'products' %}?category=gym_tools">Gym Accesories</a>
+                    <a class="category nav-link link-dark {% if nbar_category == 'gym_tools' %} active custom-product-active{% endif %}" href="/products/?category=gym_tools">Gym Accesories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if nbar_category == 'nutrition_suplements' %} active {% endif %}" href="{% url 'products' %}?category=nutrition_suplements">Nutrition Suplements</a>
+                    <a class="category nav-link link-dark {% if nbar_category == 'nutrition_suplements' %} active custom-product-active{% endif %}" href="{% url 'products' %}?category=nutrition_suplements">Suplements</a>
                 </li>
             </ul>
         </div>
