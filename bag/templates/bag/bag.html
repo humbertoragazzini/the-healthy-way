@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-8">
+                <div class="container mb-2">
+                    <div class="row justify-content-center">
+                        <div class="col mx-3 my-3">
+                            <h2>Shopping Bag</h2>
+                        </div>
+                    </div>
+
+                    <div class="row my-3">
+                        <div class="col">
+                            {% if bag_items %}
+                                <div class="table-responsive rounded">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Item</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Edit</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            {% for item in bag_items %}
+                                                <tr>
+                                                    <th scope="row"></th>
+                                                    <td>{{item.product.name}}</td>
+                                                    <td>{{item.quantity}}</td>
+                                                    <td><strong>£</strong><span class="mx-1">{{item.product.price}}</span></td>
+                                                    <td>
+                                                        <form>
+                                                            <a class="btn btn-danger btn-sm remove-item" id="{{ item.product.id }}"><i class="fas fa-trash-alt"></i></a>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td>Delivery</td>
+                                                <td></td>
+                                                <td><strong>£</strong><span class="mx-1">{{delivery|floatformat:2}}</span></td>
+                                                <td><i class="fas fa-truck mx-2"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td>Total</td>
+                                                <td></td>
+                                                <td><strong>£</strong><span class="mx-1">{{grand_total|floatformat:2}}</span></td>
+                                                <td><i class="fas fa-cash-register mx-2"></i></td>
+                                            </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="col my-5">
+                                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                        <a href="" class="btn btn-black rounded-0 btn-lg">
+                                            <span class="text-uppercase">Secure Checkout</span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </a>
+                                      </div>
+                                </div>
+                            {% else %}
+                                <p class="lead mb-5">Your bag is empty.</p>
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script type="text/javascript">
+        //delete button
+        $('.remove-item').click(function(e){
+            var csrf_token = "{{csrf_token}}";
+            var itemId = $(this).attr('id');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrf_token,'id':itemId};
+
+            $.post(url, data)
+            .done(function(){
+                 location.reload();
+             });
+        })
+    </script>
+{% endblock %}

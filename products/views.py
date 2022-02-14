@@ -1,3 +1,4 @@
+"""Views of products app"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
@@ -10,20 +11,19 @@ def all_products(request):
     """ view to show all product sorting and search queries"""
 
     products = Product.objects.all()
-    category = None
     query = None
-    nbar = Category.objects.all()
-    sort = None
+    nbar = 'products'
     direction = None
-    plans = Plans.objects.all().select_related('name').select_related('kind_of_plan')
-    
+    plans = Plans.objects.all().select_related(
+        'name').select_related('kind_of_plan')
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
             nbar = request.GET['category']
-            
+
             if 'sort' in request.GET:
                 sortkey = request.GET['sort']
                 direction = request.GET['direction']
@@ -42,7 +42,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'nbar_category': nbar, 
+        'nbar_category': nbar,
         'plans': plans,
     }
 
@@ -55,8 +55,8 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     type_of_plan = False
     plan_or_not = Category.objects.filter(name='nutrition_and_workout_plans')
-    plan=False
-    
+    plan = False
+
     if plan_or_not[0] == product.category:
         print("hola")
         plan = get_object_or_404(Plans, name=product.pk)

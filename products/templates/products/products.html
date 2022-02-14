@@ -5,45 +5,52 @@
 
 
 {% block content %}
+
+<!-- Product bar with categories, html in includes -->
 {% include 'includes/products-bar.html' %}
+
+<!-- Sorting product bar html in includes -->
 {% include 'includes/sorting-bar.html' %}
-    <div class="container my-5">
-        <div class="row justify-content-start">
-            {% for product in products %}
-            <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 gy-3">
-                <div class="card" style="width: 100%;">
-                    <a href="{% url 'product_detail' product_id=product.pk %}"><img src="{{ product.image_url }}" class="card-img-top" alt="..."></img></a>
-                    <div class="card-body">
-                      <h5 class="card-title text-truncate">{{ product.name }}</h5>
-                      <p class="card-text text-truncate">{{ product.description }}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><strong>£</strong><span class="mx-2">{{ product.price }}</span></li>
-                      <li class="list-group-item"><i class="fas fa-star"></i><span class="mx-2">{{ product.rating }}/5</span></li>
-                      {% if nbar_category == 'nutrition_and_workout_plans,gym_tools,nutrition_suplements' or nbar_category == 'products'  %}
-                      <li class="list-group-item text-truncate"><strong>Category:</strong><span class="mx-2">({{ product.category.get_friendly_name }})</span></li>
-                      {% endif %}
-                      {% for planes in plans %}
-                        {% if planes.name.name == product.name and nbar_category == 'nutrition_and_workout_plans' %}
-                          <li class="list-group-item"><p class="card-text"><strong>Duration</strong>: {{ planes.number_of_weeks }} Weeks</p></li>
-                          <li class="list-group-item"><p class="card-text"><strong>Type of Plan:</strong>( {{ planes.kind_of_plan.get_friendly_name }} )</p></li>
-                        {% endif %}
-                      {% endfor %}
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link btn btn-success">Add</a>
-                      <a href="{% url 'product_detail' product_id=product.pk %}" class="card-link btn btn-success">Details</a>
-                      
-                    </div>
-                  </div>
-            </div> 
-            {% endfor %} 
-        
-        </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-start">
+      <!-- Extract all product from products and make the cards with description, price etc. -->
+      {% for product in products %}
+        <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 gy-3">
+          <div class="card" style="width: 100%;">
+            
+            <a href="{% url 'product_detail' product_id=product.pk %}"><img src="{{ product.image_url }}" class="card-img-top" alt="..."></img></a>
+            
+            <div class="card-body">
+              <h5 class="card-title text-truncate">{{ product.name }}</h5>
+              <p class="card-text text-truncate">{{ product.description }}</p>
+            </div>
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>£</strong><span class="mx-2">{{ product.price }}</span></li>
+              <li class="list-group-item"><i class="fas fa-star"></i><span class="mx-2">{{ product.rating }}/5</span></li>
+              
+              {% if nbar_category == 'nutrition_and_workout_plans,gym_tools,nutrition_suplements' or nbar_category == 'products'  %}
+                <li class="list-group-item text-truncate"><strong>Category:</strong><span class="mx-2">({{ product.category.get_friendly_name }})</span></li>
+              {% endif %}
+              <!-- All plans are relationated with a product plan category type -->
+              {% for planes in plans %}
+                {% if planes.name.name == product.name and nbar_category == 'nutrition_and_workout_plans' %}
+                  <li class="list-group-item"><p class="card-text"><strong>Duration</strong>: {{ planes.number_of_weeks }} Weeks</p></li>
+                  <li class="list-group-item"><p class="card-text"><strong>Type of Plan:</strong>( {{ planes.kind_of_plan.get_friendly_name }} )</p></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+
+            <div class="card-body">
+              <a href="{% url 'product_detail' product_id=product.pk %}" class="card-link btn btn-success">Details</a>            
+            </div>
+
+          </div>
+        </div> 
+      {% endfor %}     
+    
     </div>
+  </div>
 
-{% endblock %}
-
-{% block postloadjs %}
- 
 {% endblock %}
