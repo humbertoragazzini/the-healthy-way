@@ -15,6 +15,7 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Plans(models.Model):
 
     class Meta: 
@@ -33,6 +34,7 @@ class Plans(models.Model):
     day6 = models.CharField(max_length=254, null=True, blank=True)
     day7 = models.CharField(max_length=254, null=True, blank=True)
 
+
 class TypeOfPlan(models.Model):
     name = models.CharField(max_length=30)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -42,6 +44,7 @@ class TypeOfPlan(models.Model):
     
     def get_friendly_name(self):
         return self.friendly_name
+
 
 class Weeks(models.Model):
 
