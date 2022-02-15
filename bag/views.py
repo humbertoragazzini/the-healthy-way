@@ -37,7 +37,6 @@ def remove_item_bag(request, item_id):
     """ Remove product to the shopping bag """
 
     bag = request.session.get('bag', {})
-    print(bag[item_id])
 
     if bag[item_id] > 0:
         bag[item_id] = bag[item_id]-1
@@ -45,7 +44,5 @@ def remove_item_bag(request, item_id):
             del bag[item_id]
 
     request.session['bag'] = bag
-
-    print(bag)
 
     return redirect(reverse(view_bag))

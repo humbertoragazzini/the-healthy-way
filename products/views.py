@@ -9,7 +9,7 @@ from .models import Product, Plans, TypeOfPlan, Category
 
 def all_products(request):
     """ view to show all product sorting and search queries"""
-
+    
     products = Product.objects.all()
     query = None
     nbar = 'products'
@@ -51,7 +51,6 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ view to show product detail and if is a plan, show duration"""
-
     product = get_object_or_404(Product, pk=product_id)
     type_of_plan = False
     plan_or_not = Category.objects.filter(name='nutrition_and_workout_plans')
