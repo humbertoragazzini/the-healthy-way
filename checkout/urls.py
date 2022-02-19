@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .webhook import webhook
+from .webhooks import webhook
 
 urlpatterns = [
     path('', views.checkout, name='checkout'),

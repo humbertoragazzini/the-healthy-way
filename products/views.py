@@ -55,9 +55,8 @@ def product_detail(request, product_id):
     type_of_plan = False
     plan_or_not = Category.objects.filter(name='nutrition_and_workout_plans')
     plan = False
-
+    
     if plan_or_not[0] == product.category:
-        print("hola")
         plan = get_object_or_404(Plans, name=product.pk)
         type_of_plan = get_object_or_404(TypeOfPlan, name=plan.kind_of_plan)
 
