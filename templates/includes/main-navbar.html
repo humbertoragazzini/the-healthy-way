@@ -16,7 +16,7 @@
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                 <li class="nav-item mx-2">
-                  <a class="nav-link">Product Management</a>
+                  <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
                 </li>
               {% endif %}
             <li class="nav-item mx-2">
