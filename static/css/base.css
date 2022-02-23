@@ -16,6 +16,18 @@ body    {
     width: 1.5rem;
 }
 
+.btn-success{
+    background-color: 	#008322 !important;
+}
+
+.mobile-nav-bar{
+    width: 100%;
+}
+
+.price-and-tittle-mobile{
+    text-align: end;
+}
+
 .font-for-brand {
     text-transform: uppercase;
 }
@@ -25,7 +37,7 @@ body    {
 }
 
 .background-nav{
-    background-color: rgb(229, 146, 78);
+    background-color: #ff9d3d;
 }
 
 .toast-icons{
@@ -33,4 +45,45 @@ body    {
     height: 15px;
 }
 
+.bag-badge{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 0.5rem;
+}
 
+.footer{
+    text-align: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgb(0, 0, 0) 100%);
+}
+
+.footer a{
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 2.5rem;
+}
+
+.copyright{
+    color: white;
+}
+
+div.carousel-text-div{
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.desktop-item-nav{
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .mobile-nav-bar {
+      display: none;
+    }
+    .desktop-item-nav{
+        display: inline;
+    }
+  }
