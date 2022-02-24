@@ -20,37 +20,18 @@ body    {
     background-color: 	#008322 !important;
 }
 
-.mobile-nav-bar{
-    width: 100%;
-}
-
-.price-and-tittle-mobile{
-    text-align: end;
-}
-
-.font-for-brand {
-    text-transform: uppercase;
-}
-
 .custom-product-active{
     background-image: linear-gradient(180deg, rgba(0, 4, 36, 0.336) 0%, rgba(225,225,254,0.7903536414565826) 47%, rgba(0,254,255,0) 100%) !important;
 }
 
-.background-nav{
-    background-color: #ff9d3d;
-}
+
 
 .toast-icons{
     width: 15px;
     height: 15px;
 }
 
-.bag-badge{
-    position: relative;
-    top: 5px;
-    left: 10px;
-    font-size: 0.5rem;
-}
+
 
 .footer{
     text-align: center;
@@ -75,15 +56,62 @@ div.carousel-text-div{
     padding-top: 20px;
 }
 
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+
+/* nav bar style */
+
+.mobile-nav-bar{
+    width: 100%;
+}
+
+.price-and-tittle-mobile{
+    text-align: end;
+}
+
+.font-for-brand {
+    text-transform: uppercase;
+}
+
+.background-nav{
+    background-color: #ff9d3d;
+}
+
+.bag-badge{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 0.5rem;
+}
+
 .desktop-item-nav{
     display: none;
 }
 
+#list-nav-bar-mobile{
+    min-width: 280px;
+    margin-top: 5px !important;
+}
+
+#bag-icon-mobile{
+    padding: 0px;
+}
+
 @media only screen and (min-width: 992px) {
     .mobile-nav-bar {
-      display: none;
+        display: none;
     }
     .desktop-item-nav{
         display: inline;
     }
   }
+
+@media only screen and (max-width: 500px) {
+    .total-in-mobile{
+        display: none !important;
+    }
+}
+
+/* -------------- */
+

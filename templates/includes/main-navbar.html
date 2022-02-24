@@ -7,22 +7,31 @@
           </button>
         </div>
         <div class="col-10 price-and-tittle-mobile">
-          <ul class="list-inline list-unstyled text-lg-right my-0">
+          <ul class="list-inline list-unstyled text-lg-right my-0" id="list-nav-bar-mobile">
             <li class="list-inline-item">
-              <a class="navbar-brand font-for-brand" href="{% url 'home' %}">The Healthy Way</a>
+              <a class="navbar-brand font-for-brand" id="tittle-big" href="{% url 'home' %}">The Healthy Way</a>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                  <div class="text-center">
-                      <div class="d-inline mx-1">{% if grand_total %}<span class="badge bg-danger bag-badge"><strong>+</strong></span>{% endif %}<i class="fas fa-shopping-bag fa-lg"></i></div>
-                      <p class="d-inline my-0">
-                          {% if grand_total %}
-                              ${{ grand_total|floatformat:2 }}
-                          {% else %}
-                              $0.00
-                          {% endif %}
+              <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link" id="bag-icon-mobile" href="{% url 'view_bag' %}">
+                    <div class="text-center">
+                      <div class="d-inline mx-1">
+                        {% if grand_total %}
+                        <span class="badge bg-danger bag-badge">
+                          <strong>
+                              {{ total_count }}
+                          </strong>
+                        </span>
+                        {% endif %}
+                        <i class="fas fa-shopping-bag fa-lg"></i>
+                      </div>
+                      <p class="d-inline my-0 total-in-mobile">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
                       </p>
-                  </div>
+                    </div>
               </a>
             </li>
           </ul>
@@ -64,7 +73,16 @@
         </form>
         <a class=" desktop-item-nav {% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
           <div class="text-center">
-              <div class="d-inline mx-1">{% if grand_total %}<span class="badge bg-danger bag-badge"><strong>+</strong></span>{% endif %}<i class="fas fa-shopping-bag fa-lg"></i></div>
+              <div class="d-inline mx-1">
+                {% if grand_total %}
+                  <span class="badge bg-danger bag-badge">
+                    <strong>
+                      {{ total_count }}
+                    </strong>
+                  </span>
+                {% endif %}
+                <i class="fas fa-shopping-bag fa-lg"></i>
+              </div>
               <p class="d-inline my-0">
                   {% if grand_total %}
                       ${{ grand_total|floatformat:2 }}

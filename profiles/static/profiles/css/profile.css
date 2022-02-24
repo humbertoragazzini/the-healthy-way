@@ -19,3 +19,24 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.items-order-profile{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+input{
+   margin: 10px 0px; 
+}
+
+button{
+    margin: 15px;
+}
+
+thead{
+    border-bottom: 1px solid black;
+}
+
+.plan-card{
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 10px 10px 0px 10px;
+}

@@ -8,6 +8,7 @@ from products.models import Product, Category
 def bag_contents(request):
     """ Shoppig bag + limited quantity of plans cuantity and delivery """
     bag_items = []
+    total_count = 0
     total = 0
     product_count = 0
     category = get_object_or_404(Category, name='nutrition_and_workout_plans')
@@ -15,6 +16,7 @@ def bag_contents(request):
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
+        total_count+=quantity
         product = get_object_or_404(Product, pk=item_id)
         if product.category != category:
             total += quantity * product.price
@@ -33,6 +35,7 @@ def bag_contents(request):
     grand_total = delivery + total
 
     context = {
+        'total_count': total_count,
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
