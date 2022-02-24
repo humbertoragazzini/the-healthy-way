@@ -24,7 +24,9 @@ body    {
     background-image: linear-gradient(180deg, rgba(0, 4, 36, 0.336) 0%, rgba(225,225,254,0.7903536414565826) 47%, rgba(0,254,255,0) 100%) !important;
 }
 
-
+.form-group{
+    margin-bottom: 10px;
+}
 
 .toast-icons{
     width: 15px;
