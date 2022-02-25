@@ -86,11 +86,33 @@ For all user a profile panel with the hability to check order history, plans and
 ### Links of all the individual wireframes:
 
 - Home page logued:
-- Home page not logued:
+![Diagram](/images-readme/Home-logued.png)
+![Diagram](/images-readme/Home-not-logued.png)
 - Login:
-- Shop:
+![Diagram](/images-readme/Login.png)
+- Register:
+![Diagram](/images-readme/Register.png)
+- Shop and shopping cart:
+![Diagram](/images-readme/Shop-all-products.png)
+![Diagram](/images-readme/Shop-Excersise-Plans.png)
+![Diagram](/images-readme/Shop-Gym-tools.png)
+![Diagram](/images-readme/Shop-Nutrition-Plans.png)
+![Diagram](/images-readme/Shop-Nutrition-products.png)
+![Diagram](/images-readme/shopping-cart-shipping.png)
+![Diagram](/images-readme/shopping-cart.png)
 - User Panel:
+![Diagram](/images-readme/User-panel-order-history.png)
+![Diagram](/images-readme/User-panel-plans-status.png)
+![Diagram](/images-readme/User-panel-user-details.png)
+![Diagram](/images-readme/Nutrition-plans.png)
+![Diagram](/images-readme/Exercise-plans.png)
+- Payment
+![Diagram](/images-readme/payment.png)
 
+### Data base design:
+
+
+![Diagram](/images-readme/data-base-models.png)
 ---
 
 ## Surface
