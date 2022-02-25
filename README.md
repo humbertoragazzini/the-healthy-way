@@ -85,14 +85,30 @@ For all user a profile panel with the hability to check order history, plans and
 
 ### Links of all the individual wireframes:
 
+---
+
 - Home page logued:
+
 ![Diagram](/images-readme/Home-logued.png)
+
 ![Diagram](/images-readme/Home-not-logued.png)
+
+---
+
 - Login:
+
 ![Diagram](/images-readme/Login.png)
+
+---
+
 - Register:
+
 ![Diagram](/images-readme/Register.png)
+
+---
+
 - Shop and shopping cart:
+
 ![Diagram](/images-readme/Shop-all-products.png)
 ![Diagram](/images-readme/Shop-Excersise-Plans.png)
 ![Diagram](/images-readme/Shop-Gym-tools.png)
@@ -100,19 +116,30 @@ For all user a profile panel with the hability to check order history, plans and
 ![Diagram](/images-readme/Shop-Nutrition-products.png)
 ![Diagram](/images-readme/shopping-cart-shipping.png)
 ![Diagram](/images-readme/shopping-cart.png)
+
+---
+
 - User Panel:
+
 ![Diagram](/images-readme/User-panel-order-history.png)
 ![Diagram](/images-readme/User-panel-plans-status.png)
 ![Diagram](/images-readme/User-panel-user-details.png)
 ![Diagram](/images-readme/Nutrition-plans.png)
 ![Diagram](/images-readme/Exercise-plans.png)
+
+---
+
 - Payment
+
 ![Diagram](/images-readme/payment.png)
+
+---
 
 ### Data base design:
 
 
 ![Diagram](/images-readme/data-base-models.png)
+
 ---
 
 ## Surface
@@ -138,7 +165,6 @@ Image to show the responsive design in the web site:
 - Home:
 Tested:
 Navbar (all links tested).
-bug in navbar (possible problem with navbar spacer only in chrome when resolution go below 1400px width)
 All buttons: position, size, all correct.
 Carousel working
 
@@ -171,23 +197,19 @@ All buttons: position, size, all correct.
 
 - **Samsung s9+ (Android) Ver.**
     - Web Browser:
-    - Chrome: Versión 96.0.4664.45
+    - Chrome: Versión 98.0.4758.101
 
 - **Iphone 12 Pro (IOS) ver.14.6**
     - Web Browsers:
-    - Zafari: ver. 14
+    - Zafari: ver. 15
 
 - **Galaxy Tab S4 (Android) Ver.10 - 4.4.205-19646842**
     - Web Browsers:
-    - EDGE: ver.46.04.4.5157
-    - Chrome: ver.91.0.4472.77
-    - Mozilla: ver.88.1.3
-    - Opera: ver.63.3.3116.58675
+    - Chrome: ver.98.0.4758.101
 
 - **Pc (windows 10) Ver.20H2 - 19042.985**
     - Web Browsers:
-    - EDGE: Versión 91.0.864.37
-    - Chrome: Versión 90.0.4430.212
+    - Chrome: Versión  98.0.4758.102
 
 - **PC (Linux Ubuntu) Ver.**
     - Web Browsers:
@@ -242,13 +264,10 @@ All buttons: position, size, all correct.
 # Deployment
 
 To clone my repository in github
-To clone my repository in github
 
 To clone de repository follow this steps:
 
-a) In my repository you can click in download.
-
-b) Safe the file an after that uncompressed the file in you desired directory.
+a) In my repository you can click clone repository.
 
 ## Deployment with gitpod:
 
@@ -295,33 +314,42 @@ part of the code was utilized from the official bootstrap website and the code i
 **The icons:**
 
 the icons were used from the font awesome website; The link was provided by the code institute learning page font awesome web site.
+[link](https://fontawesome.com/).
 
 **The fonts:**
 
 From google fonts, The link was provided by the code institute learning page
+[link](https://fonts.google.com/).
 
 **Navmenu:**
 
 From bootstrap added some code from butiqueado, and custome code.
+[link](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
 
 **Carousel**
 
 From bootstrap web page bootstrap.
+[link](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
 
 **Style**
 
 From bootstrap web page bootstrap.
-
+[link](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
 
 **Colors:**
 
 the colors of the entirely website was taken from canvas.
+[link](https://www.canva.com/es_es/).
 
 **Videos:**
 
 Edited with Resolve.
+[link](https://www.blackmagicdesign.com/products/davinciresolve/studio).
+
 Recorded with Action.
+[link](https://mirillis.com/es/productos/action-grabacion-de-pantalla-y-videojuegos.html).
 
 **Gif**
 
-Edited and Converted with onlineconverter online converter.
+Edited and Converted with onlineconverter.
+[link](https://www.onlineconverter.com/).
