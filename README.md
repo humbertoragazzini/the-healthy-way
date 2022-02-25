@@ -1,108 +1,299 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Healthy Way PROJECT
+Welcome to The Healthy Way project, This project was made with the intention of bring the best gym tools and nutritions suplement to that group of peaple how love the human body, Yes we love it and for this reason we need to take care of us not just with the best gym tools or suplement, we need the best diet plans and workout plans to build the best version of ourself, visit our web site with the link down below:
 
-Welcome humbertoragazzini,
+[The Healthy Way](to make)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# UX:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Strategy:
 
-## Gitpod Reminders
+### Is the content culturally appropriate?
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The times has change, nows days all the peaple are more connected with their bodies, we are living in a new age where fats, carbs, sugar etc are not something strager and this is not just for a better image, this is for a better life.
 
-`python3 -m http.server`
+### Is the content relevant?
 
-A blue button should appear to click: _Make Public_,
+This website is aimed for all the people how want to start, continue making his life quality better, for this reason we are going to inclued a user panel where our customer can check their orders and most importat their plans, workout and nutrition ones.
 
-Another blue button should appear to click: _Open Browser_.
+### Can we track a catalogue the content in an intuitive way?
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+In a simplistic way this website show in home all the services, and a navbar where the client can open their user panel, to control all in just one place.
 
-A blue button should appear to click: _Make Public_,
+Using HTML5, django, bootstrap, python, css and js to make this site full responsive and aimed for mobile devices.
 
-Another blue button should appear to click: _Open Browser_.
+### Comprany Goals.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Reach all the peaple interesed in fitness without excluding all the new ones how want to start a life changer, selling product for workout and nutritions suplements.
 
-To log into the Heroku toolbelt CLI:
+### Users goals.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The user goal is find the best diet and workout plans in a easy way, buy great gym tools with low prices, check rating of this product.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### What are they doing, but they could be doing better?
 
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+We can create an android app to follow or new products, track nutrition and workout plans, and share their goals.
 
 ---
 
-Happy coding!
+## Scope:
+
+### The main feactures: the possibility of navigating between the following options to find quick as possible the information needed:
+
+A home page showing the main products category: nutrition suplements, gym tools and workout/nutrition plans.
+A shop section with the posibility to sort the product by category, price, etc.
+A data base of users, products, orders and product with relations.
+The possibility to check de details of the products.
+An admin panel to edit, delete and add products.
+Full mobile device compatibility: The site will be made first thinking for mobiles.
+
+### Desired functions for the future:
+
+Conection to a social media.
+Conection to a whatsapp service for contact and the posibility to sell products
+Implement multi-language options
+Users can upload videos about their recipes.
+The posibility to make a review about a recipe.
+Structure
+In this section the basic structure will be outlined, and how the information will be presented.
+
+### What a guest would like to see the first time:
+
+Quick access to the shop
+Easy way to buy products
+Nice user panel to control all plans
+
+### How I present this information: The best way for me to present the info is to make the web site minimalistic.
+
+- Home:
+A navbar with home, shop, profile, in whis page a quick access to a register and login section.
+
+- Shop:
+A list of all products.
+A menu, with all categories, to filter this products.
+
+- Profile:
+For all user a profile panel with the hability to check order history, plans and update data.
+
+---
+
+## Skeleton
+
+### I start doing wireframes with the ideas in main, some of thems will be succedfully done, others will be added in the future releases:
+
+### Links of all the individual wireframes:
+
+Home page logued:
+Home page not logued:
+Login:
+Shop:
+User Panel:
+
+---
+
+## Surface
+
+In this section i start looking for a good palet color, this color must to be in conjuntion with the gym themes
+
+**All the website was made first thinking in mobile device, iphone to be more specific.**
+
+**In the image below we can see all the parts of the website in action.**
+
+### website
+
+Testing
+Responsive
+Image to show the responsive design in the web site:
+
+////images
+
+
+
+**Testing Web Site**
+
+- Home:
+Tested:
+Navbar (all links tested).
+bug in navbar (possible problem with navbar spacer only in chrome when resolution go below 1400px width)
+All buttons: position, size, all correct.
+Carousel working
+Recipes: 1) Navbar (all links tested). 2) All buttons: position, size, all correct acordion and view.
+
+- Shop
+Tested:
+Navbar (all links tested).
+All buttons: position, size, all correct.
+
+- User Panel:
+Navbar (all links tested).
+All buttons: position, size, all correct, edit, delete, view working.
+
+- Checkout:
+Navbar (all links tested).
+All buttons: position, size, all correct.
+
+- Bag:
+Navbar (all links tested).
+All buttons: position, size, all correct.
+
+- Login, Logout, Create Account:
+Navbar (all links tested).
+All buttons: position, size, all correct.
+
+- Admin Panel:
+Navbar (all links tested).
+All buttons: position, size, all correct.
+
+**Tested in:**
+Samsung s9+ (Android) Ver.
+Web Browser:
+Chrome: Versión 96.0.4664.45
+Iphone 12 Pro (IOS) ver.14.6
+Web Browsers:
+Zafari: ver. 14
+Galaxy Tab S4 (Android) Ver.10 - 4.4.205-19646842
+Web Browsers:
+EDGE: ver.46.04.4.5157
+Chrome: ver.91.0.4472.77
+Mozilla: ver.88.1.3
+Opera: ver.63.3.3116.58675
+Pc (windows 10) Ver.20H2 - 19042.985
+Web Browsers:
+EDGE: Versión 91.0.864.37
+Chrome: Versión 90.0.4430.212
+bug in navbar (possible problem with navbar spacer only in chrome when resolution go below 1400px width)
+PC (Linux Ubuntu) Ver.
+Web Browsers:
+Mozilla: 93.0 (64-bit)
+
+---
+
+# Frameworks and Tecnologies
+
+- HTML5
+
+- CSS
+
+- PYTHON
+
+- Js Jq
+
+- FLASK
+
+- BOOTSTRAP 4.5.1/5.1 - bootstrap.
+
+- GITPOD - gimp photo editor.
+
+- GITHUB - github.
+
+- W3C VALIDATOR - Validator html and css: w3c validator.
+
+- GIMP - GIMP photo editor: gimp photo editor.
+
+- ACTION SCREEN RECORDER - Screen recorder: ACTION.
+
+- Resolve Video Editor - Resolve.
+
+- ONLINE-CONVERTER - Video to gif: Online converter.
+
+- GOOGLE FONT - Google fonts: google font.
+
+- JSHint validator: JSHint.
+
+- PIP8 validator: PIP8.
+
+- Django
+
+- Progres
+
+- AWS
+
+- Heroku
+
+---
+
+# Deployment
+
+To clone my repository in github
+To clone my repository in github
+
+To clone de repository follow this steps:
+
+a) In my repository you can click in download.
+
+b) Safe the file an after that uncompressed the file in you desired directory.
+
+## Deployment with gitpod:
+
+* Despues de descargar el projecto, vamos a crear una cuenta de heroku, el projecto se puede cargar en heroku desde el terminal de gitpod, o desde el mismo sitio web de heroku.
+* new
+* Create new app and we going to select the clouset region to us
+* After this we are going to click in resourse tab and add new postgres then we select the free plan for our project
+* Using the terminal of gitpod install: 
+	pip3 install dj_database_url
+	pip3 install psycopg2-binary
+	pip3 install gunicorn
+* If is not in requirements please make a freeze before continue.
+	pip3 freeze > requirements.txt
+* login to heroku with the gitpod terminal
+
+Now temporary will going to disable heroku config:set DISABLE_COLLECTSTATIC=1 --app /your horaku app here/
+
+* In settings.py search ALLOWED_HOSTS=['your heroku app here.com','localhost']
+
+* In the gitpod terminal we initialize heroku with this command:
+	heroku git:remote -a heroku_app_name
+
+* with al this done we now can commit and push our project to heroku master
+
+* after this go to heroku appweb and in the deply setings click in connect to github add the repository name and connect
+
+* to test the project we going to generate a secret key for django in miniwebtool.com/django-secret-key-generator/ copy this key and paste it in heroku in settings >> confirg vars name: SECRET_KEY // VALUE: your key
+
+* We need to create bucket in AWS to do this follow this pdf:
+
+---
+
+# Credits
+
+### Content
+
+**The text:**
+
+I have written all the web site text, my wife helped me to fixed them. (Thanks to Yamile Simes Again for help me always)
+The form:
+
+part of the code was utilized from the official bootstrap website and the code institute learning page django butiqueado project.
+
+**The icons:**
+
+the icons were used from the font awesome website; The link was provided by the code institute learning page font awesome web site.
+
+**The fonts:**
+
+From google fonts, The link was provided by the code institute learning page
+
+**Navmenu:**
+
+From bootstrap added some code from butiqueado, and custome code.
+
+**Carousel**
+
+From bootstrap web page bootstrap.
+
+**Style**
+
+From bootstrap web page bootstrap.
+
+
+**Colors:**
+
+the colors of the entirely website was taken from canvas.
+
+**Videos:**
+
+Edited with Resolve.
+Recorded with Action.
+
+**Gif**
+
+Edited and Converted with onlineconverter online converter.
