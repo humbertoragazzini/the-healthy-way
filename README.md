@@ -50,11 +50,14 @@ Full mobile device compatibility: The site will be made first thinking for mobil
 
 Conection to a social media.
 Conection to a whatsapp service for contact and the posibility to sell products
-Implement multi-language options
-Users can upload videos about their recipes.
-The posibility to make a review about a recipe.
-Structure
-In this section the basic structure will be outlined, and how the information will be presented.
+Implement multi-language options.
+The posibility to make a review about a product.
+
+---
+
+## Structure
+
+### In this section the basic structure will be outlined, and how the information will be presented.
 
 ### What a guest would like to see the first time:
 
