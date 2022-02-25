@@ -85,11 +85,11 @@ For all user a profile panel with the hability to check order history, plans and
 
 ### Links of all the individual wireframes:
 
-Home page logued:
-Home page not logued:
-Login:
-Shop:
-User Panel:
+- Home page logued:
+- Home page not logued:
+- Login:
+- Shop:
+- User Panel:
 
 ---
 
@@ -111,7 +111,7 @@ Image to show the responsive design in the web site:
 
 
 
-**Testing Web Site**
+### Testing Web Site
 
 - Home:
 Tested:
@@ -119,7 +119,6 @@ Navbar (all links tested).
 bug in navbar (possible problem with navbar spacer only in chrome when resolution go below 1400px width)
 All buttons: position, size, all correct.
 Carousel working
-Recipes: 1) Navbar (all links tested). 2) All buttons: position, size, all correct acordion and view.
 
 - Shop
 Tested:
@@ -146,27 +145,31 @@ All buttons: position, size, all correct.
 Navbar (all links tested).
 All buttons: position, size, all correct.
 
-**Tested in:**
-Samsung s9+ (Android) Ver.
-Web Browser:
-Chrome: Versión 96.0.4664.45
-Iphone 12 Pro (IOS) ver.14.6
-Web Browsers:
-Zafari: ver. 14
-Galaxy Tab S4 (Android) Ver.10 - 4.4.205-19646842
-Web Browsers:
-EDGE: ver.46.04.4.5157
-Chrome: ver.91.0.4472.77
-Mozilla: ver.88.1.3
-Opera: ver.63.3.3116.58675
-Pc (windows 10) Ver.20H2 - 19042.985
-Web Browsers:
-EDGE: Versión 91.0.864.37
-Chrome: Versión 90.0.4430.212
-bug in navbar (possible problem with navbar spacer only in chrome when resolution go below 1400px width)
-PC (Linux Ubuntu) Ver.
-Web Browsers:
-Mozilla: 93.0 (64-bit)
+### Tested in:
+
+- **Samsung s9+ (Android) Ver.**
+    - Web Browser:
+    - Chrome: Versión 96.0.4664.45
+
+- **Iphone 12 Pro (IOS) ver.14.6**
+    - Web Browsers:
+    - Zafari: ver. 14
+
+- **Galaxy Tab S4 (Android) Ver.10 - 4.4.205-19646842**
+    - Web Browsers:
+    - EDGE: ver.46.04.4.5157
+    - Chrome: ver.91.0.4472.77
+    - Mozilla: ver.88.1.3
+    - Opera: ver.63.3.3116.58675
+
+- **Pc (windows 10) Ver.20H2 - 19042.985**
+    - Web Browsers:
+    - EDGE: Versión 91.0.864.37
+    - Chrome: Versión 90.0.4430.212
+
+- **PC (Linux Ubuntu) Ver.**
+    - Web Browsers:
+    - Mozilla: 93.0 (64-bit)
 
 ---
 
