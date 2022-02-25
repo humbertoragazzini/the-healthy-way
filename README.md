@@ -156,7 +156,7 @@ Testing
 Responsive
 Image to show the responsive design in the web site:
 
-////images
+![responsive](/images-readme/responsive.gif)
 
 
 
