@@ -11,7 +11,7 @@
             <div class="col-xs-12 col-md-6">
                 <!--bootstrap card with all the product descriptions, price,category, type of plans-->
                 <div class="card mb-3">
-                    <img src="{{product.image_url}}" class="card-img-top" alt="...">
+                    <img src="{% if product.image %} {{product.image.url}}{% else %}{{MEDIA_URL}}no-image.jpg{% endif %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h4 class="card-title">{{ product.name }}</h4>
                         <p class="card-text"><strong>Category:</strong><span class="mx-2">{{ product.category.get_friendly_name }}</span></p>
@@ -49,14 +49,10 @@
                                         <span class="text-uppercase"><i class="fas fa-chevron-left mx-1"></i>Keep Shopping</span>
                                     </a>
                                     {% if  request.user.is_superuser %}
-                                        <a href="{% url 'edit_product' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
-                                            <span class="icon">
-                                            </span>
+                                        <a href="{% url 'edit_product' product.id %}" class="btn btn-warning rounded-2 mt-5">
                                             <span class="text-uppercase">Edit</span>
                                         </a>
-                                        <a href="{% url 'delete_product' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
-                                            <span class="icon">
-                                            </span>
+                                        <a href="{% url 'delete_product' product.id %}" class="btn btn-danger rounded-2 mt-5">
                                             <span class="text-uppercase">Delete</span>
                                         </a>
                                     {% endif %}

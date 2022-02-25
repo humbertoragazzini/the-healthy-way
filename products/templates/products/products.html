@@ -8,11 +8,20 @@
 
 {% block content %}
 
+{% if not request.user.is_authenticated %}
+<div class="container-flex">
+  <div class="col text-center bg-dark text-light p-1">
+    <h6 class="fst-italic fw-lighter">Remember to create an account to have access to our workout and diet plans <a href="{% url 'account_signup' %}">Sign Up Now!</a></h6>
+  </div>
+</div>
+{% endif %}
+
 <!-- Product bar with categories, html in includes -->
 {% include 'includes/products-bar.html' %}
 
 <!-- Sorting product bar html in includes -->
 {% include 'includes/sorting-bar.html' %}
+
 
   <div class="container my-5">
     <div class="row justify-content-start">
@@ -22,7 +31,7 @@
           <div class="card" style="width: 100%;">
             <div class="container">
               <div class="row">
-                <div class="col baground-image-product" style="background-image: url({{ product.image_url }});">
+                <div class="col baground-image-product" style="background-image: url({% if product.image %} {{product.image.url}}{% else %}{{MEDIA_URL}}no-image.jpg{% endif %});">
                   <a href="{% url 'product_detail' product_id=product.pk %}"></a>
                 </div>
               </div>
