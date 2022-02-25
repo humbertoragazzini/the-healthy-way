@@ -207,11 +207,11 @@ All buttons: position, size, all correct.
     - Web Browsers:
     - Chrome: ver.98.0.4758.101
 
-- **Pc (windows 10) Ver.20H2 - 19042.985**
+- **Pc (windows 10) 21H2 - 19044.1526**
     - Web Browsers:
     - Chrome: Versión  98.0.4758.102
 
-- **PC (Linux Ubuntu) Ver.**
+- **PC (Linux Ubuntu) Ver. 20.04 lts**
     - Web Browsers:
     - Mozilla: 93.0 (64-bit)
 
@@ -351,5 +351,7 @@ Recorded with Action.
 
 **Gif**
 
-Edited and Converted with onlineconverter.
+Edited and Converted with onlineconverter and ezgif.
 [link](https://www.onlineconverter.com/).
+
+[link](https://ezgif.com/).
