@@ -217,6 +217,20 @@ All buttons: position, size, all correct.
 
 ---
 
+### Validators
+
+- W3C html validation
+
+- PIP8 validation
+
+- CSS validation
+
+- style.css validation
+
+- JSHint validation
+
+---
+
 # Frameworks and Tecnologies
 
 - HTML5
