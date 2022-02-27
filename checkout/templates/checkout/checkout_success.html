@@ -45,7 +45,7 @@
                                                                     <ul class="list-unstyled">
                                                                         {% for item in order.lineitems.all %}
                                                                             <li class="small">
-                                                                                {{ item.quantity }} @ ${{ item.product.price }} each
+                                                                                {{ item.quantity }} x ${{ item.product.price }} each
                                                                             </li>
                                                                         {% endfor %}
                                                                     </ul>
