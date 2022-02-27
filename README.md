@@ -281,32 +281,29 @@ To clone my repository in github
 
 To clone de repository follow this steps:
 
-a) In my repository you can click clone repository.
+In my repository you can click clone repository.
 
 ## Deployment with gitpod:
 
-* Despues de descargar el projecto, vamos a crear una cuenta de heroku, el projecto se puede cargar en heroku desde el terminal de gitpod, o desde el mismo sitio web de heroku.
-* new
-* Create new app and we going to select the clouset region to us
-* After this we are going to click in resourse tab and add new postgres then we select the free plan for our project
-* Using the terminal of gitpod install: 
-	pip3 install dj_database_url
-	pip3 install psycopg2-binary
-	pip3 install gunicorn
-* If is not in requirements please make a freeze before continue.
-	pip3 freeze > requirements.txt
-* login to heroku with the gitpod terminal
+* In heroku website we need to create a progres db but before this we going to create an app in the heroku control panel (use your desire plan "free or paid")
 
-Now temporary will going to disable heroku config:set DISABLE_COLLECTSTATIC=1 --app /your horaku app here/
+* login to heroku with the gitpod terminal: heroku login -i
+ Insert username and password from your heroku account.
 
-* In settings.py search ALLOWED_HOSTS=['your heroku app here.com','localhost']
+* with al this done we now can commit and push our project to heroku master or main (git push heroku main)
+
+* check migrations with python3 manage.py showmigrations we should have migrations not applied (this migrations are in the progres db)
+
+* execute the migrations with python3 manage.py migrate
+
+* after this we going to execute this code to copy our data in the db.json: python3 manage.py loaddata db.json
 
 * In the gitpod terminal we initialize heroku with this command:
 	heroku git:remote -a heroku_app_name
 
-* with al this done we now can commit and push our project to heroku master
+* Now temporary will going to disable heroku config:set DISABLE_COLLECTSTATIC=1 --app /your horaku app here/
 
-* after this go to heroku appweb and in the deply setings click in connect to github add the repository name and connect
+* after this go to heroku appweb and in the deploy setings click in connect to github add the repository name (the repository where you have all the files from this project) and connect
 
 * to test the project we going to generate a secret key for django in miniwebtool.com/django-secret-key-generator/ copy this key and paste it in heroku in settings >> confirg vars name: SECRET_KEY // VALUE: your key
 
