@@ -36,11 +36,9 @@
                                                                 <td> {{ item.product.name }}</td>
                                                                 <td>
                                                                     <ul class="list-unstyled">
-                                                                        {% for item in order.lineitems.all %}
-                                                                            <li class="small">
-                                                                                {{ item.quantity }} x ${{ item.product.price }} each
-                                                                            </li>
-                                                                        {% endfor %}
+                                                                        <li class="small">
+                                                                            {{ item.quantity }} x ${{ item.product.price }} each
+                                                                        </li>
                                                                     </ul>
                                                                 </td>
                                                             </tr>
