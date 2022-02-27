@@ -38,7 +38,7 @@ card.addEventListener('change', function (event) {
             <span>${event.error.message}</span>`;
         $(errorDiv).html(html);
     } else {
-        errorDiv.textContent = 'PASO';
+        errorDiv.textContent = 'No errors';
     }
 });
 
