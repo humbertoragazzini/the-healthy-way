@@ -1,7 +1,7 @@
 # The Healthy Way PROJECT
-Welcome to The Healthy Way project, This project was made with the intention of bring the best gym tools and nutritions suplement to that group of peaple how love the human body, Yes we love it and for this reason we need to take care of us not just with the best gym tools or suplement, we need the best diet plans and workout plans to build the best version of ourself, visit our web site with the link down below:
+Welcome to The Healthy Way project, This project was made with the intention of bring the best gym tools and nutrition's supplement to that group of people how love the human body, Yes we love it and for this reason we need to take care of us not just with the best gym tools or supplement, we need the best diet plans and workout plans to build the best version of ourself, visit our web site with the link down below: 
 
-[The Healthy Way](to make)
+[The Healthy Way](https://the-healthy-way.herokuapp.com/).
 
 # UX:
 
@@ -9,29 +9,29 @@ Welcome to The Healthy Way project, This project was made with the intention of 
 
 ### Is the content culturally appropriate?
 
-The times has change, nows days all the peaple are more connected with their bodies, we are living in a new age where fats, carbs, sugar etc are not something strager and this is not just for a better image, this is for a better life.
+The times has change, Nows days all the people are more connected with their bodies, we are living in a new age where fats, carbs, sugar etc are not something stranger and this is not just for a better image, this is for a better life
 
 ### Is the content relevant?
 
-This website is aimed for all the people how want to start, continue making his life quality better, for this reason we are going to inclued a user panel where our customer can check their orders and most importat their plans, workout and nutrition ones.
+This website is aimed for all the people how want to start, continue making his life quality better, for this reason we are going to include a user panel where our customer can check their orders and most important their plans, workout and nutrition ones. 
 
 ### Can we track a catalogue the content in an intuitive way?
 
-In a simplistic way this website show in home all the services, and a navbar where the client can open their user panel, to control all in just one place.
+In a simplistic way this website show in home all the services, and a navbar where the client can open their user panel, to control all in just one place. 
 
 Using HTML5, django, bootstrap, python, css and js to make this site full responsive and aimed for mobile devices.
 
 ### Comprany Goals.
 
-Reach all the peaple interesed in fitness without excluding all the new ones how want to start a life changer, selling product for workout and nutritions suplements.
+Reach all the people interested in fitness without excluding all the new ones how want to start a life changer, selling product for workout and nutrition's supplements. 
 
 ### Users goals.
 
-The user goal is find the best diet and workout plans in a easy way, buy great gym tools with low prices, check rating of this product.
+The user goal is find the best diet and workout plans in a easy way, buy great gym tools with low prices, check rating of this product. 
 
 ### What are they doing, but they could be doing better?
 
-We can create an android app to follow or new products, track nutrition and workout plans, and share their goals.
+We can create an android app to follow or new products, track nutrition and workout plans, and share their goals. 
 
 ---
 
@@ -39,19 +39,18 @@ We can create an android app to follow or new products, track nutrition and work
 
 ### The main feactures: the possibility of navigating between the following options to find quick as possible the information needed:
 
-A home page showing the main products category: nutrition suplements, gym tools and workout/nutrition plans.
-A shop section with the posibility to sort the product by category, price, etc.
-A data base of users, products, orders and product with relations.
-The possibility to check de details of the products.
-An admin panel to edit, delete and add products.
-Full mobile device compatibility: The site will be made first thinking for mobiles.
+A home page showing the main products category: nutrition supplements, gym tools and workout/nutrition plans. 
+A shop section with the possibility to sort the product by category, price, etc. 
+A data base of users, products, orders and product with relations. 
+The possibility to check de details of the products. 
+An admin panel to edit, delete and add products. 
+Full mobile device compatibility: The site will be made first thinking for mobiles. 
 
 ### Desired functions for the future:
 
-Conection to a social media.
-Conection to a whatsapp service for contact and the posibility to sell products
-Implement multi-language options.
-The posibility to make a review about a product.
+Connection to a social media. 
+Connection to a whatsapp service for contact and the possibility to sell products Implement multi-language options. 
+The possibility to make a review about a product. 
 
 ---
 
@@ -81,7 +80,7 @@ For all user a profile panel with the hability to check order history, plans and
 
 ## Skeleton
 
-### I start doing wireframes with the ideas in main, some of thems will be succedfully done, others will be added in the future releases:
+### I start doing wireframes with the ideas in main, some of them will be succeed fully done, others will be added in the future releases: 
 
 ### Links of all the individual wireframes:
 
@@ -144,7 +143,7 @@ For all user a profile panel with the hability to check order history, plans and
 
 ## Surface
 
-In this section i start looking for a good palet color, this color must to be in conjuntion with the gym themes
+In this section i start looking for a good palette color, this color must to be in conjunction with the gym themes 
 
 **All the website was made first thinking in mobile device, iphone to be more specific.**
 
@@ -285,7 +284,7 @@ In my repository you can click clone repository.
 
 ## Deployment with gitpod:
 
-* In heroku website we need to create a progres db but before this we going to create an app in the heroku control panel (use your desire plan "free or paid")
+* In heroku website we need to create a progress db but before this we going to create an app in the heroku control panel (use your desire plan "free or paid")
 
 * login to heroku with the gitpod terminal: heroku login -i
  Insert username and password from your heroku account.
@@ -337,22 +336,28 @@ after this we press in generate policy, we are going to copy this but before we 
 - we create a group
 - Create policy then import manage policy
 - Click in amazons3fullaccess and import
-- The ARN we copy before we need to added in the policy inside of resource, because is going to be a list, we delet "*" and add:
+- The ARN we copy before we need to added in the policy inside of resource, because is going to be a list, we delete "*" and add:
     [
         "yourARN",
         "yourARN/*"
     ]
 next, and review, insert a name and description then create policy
-- We atach this policy with the group and create.
+- We attach this policy with the group and create.
 
 **Create user**
 
 - Add user with programmatic access and we add this user to the group when create the user before close, download de CSV file
 
 - Copy this keys in heroku inside the vars option:
-AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY this two codes are inside the CSV file downloaded before.
+AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY these two codes are inside the CSV file downloaded before.
 
-
+With this done, we going to online paste our keys from stripe, google email into our heroku panel in vars:
+USE_AWS: True
+STRIPE_WH_SECRET (webhook): your keys
+STRIPE_SECRET_KEY: your key (the secret one in reveal key)
+STRIPE_PUBLIC_KEY: (the public one from the main panel in development in this case)
+EMAIL_HOST_USER: your email
+EMAIL_HOST_PASS: the code generated by gmail in app (settings)
 
 
 ---

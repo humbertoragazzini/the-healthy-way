@@ -14,7 +14,7 @@ def all_products(request):
     
     products = Product.objects.all()
     query = None
-    nbar = 'products'
+    nbar = 'nutrition_and_workout_plans,gym_tools,nutrition_suplements'
     direction = None
     plans = Plans.objects.all().select_related(
         'name').select_related('kind_of_plan')
