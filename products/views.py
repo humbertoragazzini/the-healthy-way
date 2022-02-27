@@ -11,7 +11,6 @@ from .forms import ProductForm, PlansForm
 
 def all_products(request):
     """ view to show all product sorting and search queries"""
-    
     products = Product.objects.all()
     query = None
     nbar = 'nutrition_and_workout_plans,gym_tools,nutrition_suplements'
@@ -57,11 +56,12 @@ def product_detail(request, product_id):
     type_of_plan = False
     plan_or_not = Category.objects.filter(name='nutrition_and_workout_plans')
     plan = False
-    
+
     if plan_or_not[0] == product.category:
         try:
             plan = Plans.objects.get(name=product.pk)
-            type_of_plan = get_object_or_404(TypeOfPlan, name=plan.kind_of_plan)
+            type_of_plan = get_object_or_404(
+                                        TypeOfPlan, name=plan.kind_of_plan)
         except Plans.DoesNotExist:
             plan = False
             type_of_plan = None
@@ -78,6 +78,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
@@ -92,8 +93,7 @@ def add_product(request):
             product_plan = Product.objects.filter(name=form.save())
             if product_plan[0].category.id == plan.id:
                 product_id = product_plan[0].id
-                print(product_id)
-                return redirect(reverse('add_plan',args=[product_id]))
+                return redirect(reverse('add_plan', args=[product_id]))
             else:
                 messages.success(request, 'Successfully added product!')
                 return redirect(reverse('add_product'))
@@ -101,13 +101,14 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def add_plan(request, product_id):
@@ -142,6 +143,7 @@ def add_plan(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -157,7 +159,7 @@ def edit_product(request, product_id):
             product_plan = Product.objects.filter(name=form.save())
             if product_plan[0].category.id == plan.id:
                 product_id = product_plan[0].id
-                return redirect(reverse('add_plan',args=[product_id]))
+                return redirect(reverse('add_plan', args=[product_id]))
             else:
                 messages.success(request, 'Successfully updated product!')
                 return redirect(reverse('product_detail', args=[product.id]))
@@ -173,7 +175,8 @@ def edit_product(request, product_id):
         'product': product,
     }
 
-    return render(request, template, context)    
+    return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
@@ -181,7 +184,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
 
     plan = get_object_or_404(Category, name='nutrition_and_workout_plans')
