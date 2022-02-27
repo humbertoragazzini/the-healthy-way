@@ -307,7 +307,53 @@ In my repository you can click clone repository.
 
 * to test the project we going to generate a secret key for django in miniwebtool.com/django-secret-key-generator/ copy this key and paste it in heroku in settings >> confirg vars name: SECRET_KEY // VALUE: your key
 
-* We need to create bucket in AWS to do this follow this pdf:
+* We need to create bucket S3 in AWS to do this follow this:
+
+**The bucket need to have:**
+- The bucket need to be public, because will use this bucket for our statics files
+- Enable Static Website Hosting
+- ACLs enable
+- In the permissions tab CORS (edit) and paste this code:
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+- In the Policy edit and policy generator: we select ("Type policy":"S3 bucket policy","principal":"*","Actions":"get object") and we paste the ARN
+after this we press in generate policy, we are going to copy this but before we are going to change  in the resource key at the end we add /* then save.
+
+- ACL whe select everyone (public access) (we mark "list")
+
+**In the service bar we search IAM**
+- we create a group
+- Create policy then import manage policy
+- Click in amazons3fullaccess and import
+- The ARN we copy before we need to added in the policy inside of resource, because is going to be a list, we delet "*" and add:
+    [
+        "yourARN",
+        "yourARN/*"
+    ]
+next, and review, insert a name and description then create policy
+- We atach this policy with the group and create.
+
+**Create user**
+
+- Add user with programmatic access and we add this user to the group when create the user before close, download de CSV file
+
+- Copy this keys in heroku inside the vars option:
+AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY this two codes are inside the CSV file downloaded before.
+
+
+
 
 ---
 
