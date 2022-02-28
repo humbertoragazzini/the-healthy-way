@@ -7,6 +7,7 @@ from products.models import Plans, Product, Category
 
 from checkout.models import Order
 
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -33,7 +34,7 @@ def profile(request):
                 cache_items.append(item.product)
                 cache_product = Product.objects.get(name=item.product.name)
                 if cache_product.category.name == plan_category.name:
-                    cache=plans.filter(name=cache_product.pk)
+                    cache = plans.filter(name=cache_product.pk)
                     cache_plans.append(cache[0])
     template = 'profiles/profile.html'
     context = {
@@ -43,6 +44,8 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+
 @login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
