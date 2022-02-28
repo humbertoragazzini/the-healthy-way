@@ -219,6 +219,11 @@ All buttons: position, size, all correct.
 ### Validators
 
 - W3C html validation
+[home](/images-readme/html-index.png).
+[checkout](/images-readme/html-checkout.png).
+[product detail](/images-readme/html-products-details.png).
+[products](/images-readme/html-products.png).
+[profile](/images-readme/html-prodile.png).
 
 - PIP8 validation
 
