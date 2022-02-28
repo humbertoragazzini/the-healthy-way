@@ -16,7 +16,7 @@ def bag_contents(request):
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
-        total_count+=quantity
+        total_count += quantity
         product = get_object_or_404(Product, pk=item_id)
         if product.category != category:
             total += quantity * product.price

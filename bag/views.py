@@ -19,7 +19,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         if product.category == category:
-            messages.error(request, 'Sorry you can add the same plan two times')
+            messages.error(request,
+                           'Sorry you can add the same plan two times')
             redirect(redirect_url)
         else:
             bag[item_id] += quantity
