@@ -1,3 +1,6 @@
+"""
+The profile app views
+"""
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -48,6 +51,9 @@ def profile(request):
 
 @login_required
 def order_history(request, order_number):
+    """
+    Order history view and message sender for toast
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
