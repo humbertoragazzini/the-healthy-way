@@ -226,10 +226,21 @@ All buttons: position, size, all correct.
     - [profile](/images-readme/html-prodile.png).
 
 - PIP8 validation
-
-- CSS validation
-
-- JSHint validation
+    - [admin.py checkout](/pip8-admin-checkout.png).
+    - [admin.py products](/pip8-admin-products.png).
+    - [context.py bag](/pip8-context-bag.png).
+    - [forms.py checkout](/pip8-forms-checkout.png).
+    - [forms.py products](/pip8-forms-products.png).
+    - [forms.py profiles](/pip8-forms-profiles.png).
+    - [model-products](/pip8-model-products.png).
+    - [models.py checkout](/pip8-models-checkout.png).
+    - [models.py profiles](/pip8-models-profiles.png).
+    - [views.py profiles](/pip8-view-profiles.png).
+    - [views.py bag](/pip8-views-bag.png).
+    - [views.py checkout](/pip8-views-checkout.png).
+    - [views.py products](/pip8-views-products.png).
+    - [wh.py weebhook](/pip8-wh-checkout.png).
+    - [wh-handler.py](/pip8-wh-handler-checkout.png).
 
 ---
 
