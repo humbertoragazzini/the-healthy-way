@@ -25,10 +25,10 @@ class StripeWH_Handler:
         """
         cust_email = order.email
         subject = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_subject.txt', {'order':order}
+            'checkout/confirmation_emails/confirmation_email_subject.txt', {'order': order}
         )
         body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',{'order':order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+            'checkout/confirmation_emails/confirmation_email_body.txt', {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
         )
 
         send_mail(
@@ -58,7 +58,7 @@ class StripeWH_Handler:
         shipping_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
-        #clean al data
+        # clean al data
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None

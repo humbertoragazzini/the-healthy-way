@@ -19,7 +19,7 @@
                         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Sorting By Rating
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                         <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=rating&direction=desc">Best Rating First</a></li>
                         <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=rating&direction=asc">Low Rating First</a></li>
                         </ul>
@@ -30,7 +30,7 @@
                         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Sorting By Name
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                         <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=name&direction=asc">Alphabetical (A-to-Z)</a></li>
                         <li><a class="shared-property dropdown-item" href="{% url 'products' %}?category={{nbar_category}}&sort=name&direction=desc">Alphabetical (Z-to-A)</a></li>
                         </ul>
