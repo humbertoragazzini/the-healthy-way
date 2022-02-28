@@ -37,7 +37,8 @@ def all_products(request):
             if not query:
                 messages.error(request, "You did't enter any search")
                 return redirect(reverse('products'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = \
+                Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     context = {
@@ -98,7 +99,9 @@ def add_product(request):
                 messages.success(request, 'Successfully added product!')
                 return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add product. \
+                               Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -127,7 +130,9 @@ def add_plan(request, product_id):
             messages.success(request, 'Link Successfully')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to link the plan. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to link the plan. \
+                              Please ensure the form is valid.')
     else:
         try:
             plan = Plans.objects.get(name=product.pk)
@@ -164,7 +169,9 @@ def edit_product(request, product_id):
                 messages.success(request, 'Successfully updated product!')
                 return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. \
+                               Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
